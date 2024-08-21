@@ -38,7 +38,7 @@ nav .container .bars {
   display: flex;
   align-items: center;
 }
-nav .container .bars .bar {
+nav .container .bars .bolim {
   display: none;
 }
 nav .container .bars .links {
@@ -594,10 +594,14 @@ footer .container .saytlar .sayt .harf:hover {
   nav .container .bars .links {
     display: none;
   }
-  nav .container .bars .bar {
-    font-size: 20px;
-    color: #000000;
+  nav .container .bars .bolim {
     display: block;
+  }
+  nav .container .bars .bolim select {
+    outline: none;
+    background-color: #F3F3F3;
+    width: 100px;
+    border: none;
   }
   .hero .container {
     flex-direction: column;
