@@ -34,16 +34,23 @@ nav .container .logo img {
     transform: rotateY(360deg);
   }
 }
-nav .container .links {
+nav .container .bars {
+  display: flex;
+  align-items: center;
+}
+nav .container .bars .bar {
+  display: none;
+}
+nav .container .bars .links {
   display: flex;
   align-items: center;
   gap: 40px;
 }
-nav .container .links .xizmat {
+nav .container .bars .links .xizmat {
   position: relative;
   padding-bottom: 5px;
 }
-nav .container .links .xizmat ::after {
+nav .container .bars .links .xizmat ::after {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -53,24 +60,24 @@ nav .container .links .xizmat ::after {
   background-color: #00BAFC;
   transition: all 0.3s ease;
 }
-nav .container .links .xizmat :hover::after {
+nav .container .bars .links .xizmat :hover::after {
   width: 100%;
 }
-nav .container .links .xizmat a {
+nav .container .bars .links .xizmat a {
   color: #000000;
   text-decoration: none;
   font-size: 15px;
   font-weight: 400;
 }
-nav .container .links .but .btn {
+nav .container .bars .links .but button {
   padding: 10px 20px;
-  border: none;
   background-color: #00BAFC;
   border-radius: 10px;
   font-size: 15px;
   font-weight: 500;
+  border: none;
 }
-nav .container .links .but .btn a {
+nav .container .bars .links .but button a {
   text-decoration: none;
   color: white;
 }
@@ -109,7 +116,7 @@ nav .container .links .but .btn a {
 }
 
 .products {
-  padding: 140px;
+  padding: 140px 0px;
 }
 .products .nullam {
   width: 750px;
@@ -164,7 +171,7 @@ nav .container .links .but .btn a {
   width: 400px;
   margin: 0 auto;
 }
-.products .buyurtma .buy {
+.products .buyurtma button {
   padding: 8px 20px;
   background-color: #00BAFC;
   color: white;
@@ -205,6 +212,9 @@ nav .container .links .but .btn a {
 .jobs .students .student .png img {
   width: 100%;
 }
+.jobs .students .student .png2 {
+  display: none;
+}
 .jobs .students .student .aniqlash {
   width: 650px;
 }
@@ -243,19 +253,19 @@ nav .container .links .but .btn a {
   font-weight: 400;
   margin-bottom: 10px;
 }
-.address .crads {
+.address .cards {
   width: 340px;
   margin: 0 auto;
   background-color: white;
   line-height: 60px;
   padding: 20px;
 }
-.address .crads .card {
+.address .cards .card {
   width: 300px;
   margin: 0 auto;
   text-align: center;
 }
-.address .crads .card .nom {
+.address .cards .card .nom {
   width: 270px;
   padding: 14px 20px;
   border: none;
@@ -263,12 +273,12 @@ nav .container .links .but .btn a {
   border-radius: 6px;
   outline: none;
 }
-.address .crads .card .nom ::placeholder {
+.address .cards .card .nom ::placeholder {
   color: #000000;
   font-size: 16px;
   font-weight: 400;
 }
-.address .crads .card .buy {
+.address .cards .card .buy {
   padding: 10px 20px;
   background-color: #00BAFC;
   border: none;
@@ -337,4 +347,114 @@ footer .container .saytlar .sayt .icon {
 footer .container .saytlar .sayt .harf {
   font-size: 16px;
   font-weight: 400;
+}
+
+@media (max-width: 447px) {
+  .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  nav .container .bars .links {
+    display: none;
+  }
+  nav .container .bars .bar {
+    font-size: 20px;
+    color: #000000;
+    display: block;
+  }
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero .container .hero_info {
+    width: 100%;
+  }
+  .hero .container .hero_info p {
+    padding-right: 0px;
+  }
+  .hero .container .hero_info button {
+    margin-bottom: 20px;
+  }
+  .hero .container .hero_rasm img {
+    width: 100%;
+  }
+  .products .container .nullam {
+    width: 100%;
+    text-align: center;
+  }
+  .products .container .boxs .box {
+    width: 100%;
+  }
+  .products .container .boxs .box .foto {
+    width: 100%;
+  }
+  .products .container .buyurtma {
+    flex-direction: column;
+    width: 100%;
+  }
+  .jobs .container .what {
+    width: 100%;
+  }
+  .jobs .container .students .student {
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+  .jobs .container .students .student .png {
+    display: none;
+    width: 100%;
+  }
+  .jobs .container .students .student .png1 {
+    display: block;
+  }
+  .jobs .container .students .student .png2 {
+    display: block;
+  }
+  .jobs .container .students .student .png3 {
+    display: block;
+  }
+  .jobs .container .students .student .png4 {
+    display: block;
+  }
+  .jobs .container .students .student .png5 {
+    display: block;
+  }
+  .jobs .container .students .student .aniqlash {
+    width: 100%;
+  }
+  .address .container .laoret {
+    width: 100%;
+  }
+  .address .container .crads {
+    width: 100%;
+  }
+  .address .container .crads .crad {
+    width: 100%;
+  }
+  .address .container .crads .crad input {
+    width: 100%;
+  }
+  .address .container .crads .crad button {
+    padding: 10px 15px;
+  }
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  footer .container .copyright {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  footer .container .about {
+    width: 100%;
+  }
+  footer .container .saytlar {
+    width: 100%;
+  }
+  footer .container .saytlar .sayt {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
 }/*# sourceMappingURL=main.css.map */

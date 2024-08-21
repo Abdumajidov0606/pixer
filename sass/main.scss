@@ -43,47 +43,54 @@ nav{
             }
            } 
         }
-        .links{
+        .bars{
             display: flex;
             align-items: center;
-            gap: 40px;
-            .xizmat{
-               position: relative;
-               padding-bottom: 5px;
-                ::after{
-                    content: "";
-                    position: absolute;
-                    bottom: 0px;
-                    left: 0px;
-                    width: 0px;
-                    height: 4px;
-                    background-color: $mainBlue;
-                    transition: all .3s ease;
-                }
-                :hover::after{
-                    width: 100%;
-                }
-               
-                a{
-                 color: $mainBlack;
-                 text-decoration: none;
-                 font-size: 15px;
-                 font-weight: 400;
-                }               
-            }    
-            .but .btn{
-                   padding: 10px 20px;
-                   border: none;
-                   background-color: $mainBlue;
-                   border-radius: 10px; 
-                   font-size: 15px;
-                   font-weight: 500;
+            .bar{
+                display: none;
+            }
+            .links{
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                .xizmat{
+                   position: relative;
+                   padding-bottom: 5px;
+                    ::after{
+                        content: "";
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0px;
+                        width: 0px;
+                        height: 4px;
+                        background-color: $mainBlue;
+                        transition: all .3s ease;
+                    }
+                    :hover::after{
+                        width: 100%;
+                    }
                    
-                a{
-                   text-decoration: none;
-                   color: $white-color;
-                }
-            }      
+                    a{
+                     color: $mainBlack;
+                     text-decoration: none;
+                     font-size: 15px;
+                     font-weight: 400;
+                    }               
+                }    
+                .but button{
+                       padding: 10px 20px;
+                       background-color: $mainBlue;
+                       border-radius: 10px; 
+                       font-size: 15px;
+                       font-weight: 500;
+                       border: none;
+                       
+                    a{
+                       text-decoration: none;
+                       color: $white-color;
+                    }
+                }      
+            }
         }
     }
 }
@@ -125,7 +132,7 @@ nav{
 }
 
 .products{
-    padding: 140px;
+    padding: 140px 0px;
     .nullam{
         width: 750px;
         margin: 0 auto;
@@ -178,7 +185,7 @@ nav{
         gap: 20px;
         width: 400px;
         margin: 0 auto;
-        .buy{
+        button{
             padding: 8px 20px;
             background-color: $mainBlue;
             color: $white-color;
@@ -223,6 +230,10 @@ nav{
                     width: 100%;
                 }
             }
+           
+            .png2{
+                display: none;
+            }
             .aniqlash{
                 width: 650px;
             }
@@ -263,7 +274,7 @@ nav{
         margin-bottom: 10px;
      }
     }
-    .crads{
+    .cards{
         width: 340px;
         margin: 0 auto;
         background-color: $white-color;
@@ -360,5 +371,141 @@ footer{
         }
      }
 
+    }
+}
+
+@media(max-width:447px){
+    .container{
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    nav{
+        .container{
+            .bars{
+                .links{
+                    display: none;
+                }
+                .bar{
+                    font-size: 20px;
+                    color: $mainBlack;
+                    display: block;
+                }
+            }
+        }
+    }
+    .hero{
+        .container{
+            flex-direction: column;
+            text-align: center;
+            .hero_info{
+                width: 100%;
+                p{
+                 padding-right: 0px;
+                }
+                button{
+                    margin-bottom: 20px;
+                }
+            }
+            .hero_rasm img{
+                width: 100%;
+            }
+        }
+    }
+    .products{
+        .container{
+            .nullam{
+                width: 100%;
+                text-align: center;
+            }
+            .boxs{
+                .box{
+                    width: 100%;
+                    .foto{
+                        width: 100%;
+                    }
+                }
+            }
+            .buyurtma{
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+    }
+    .jobs{
+        .container{
+            .what{
+                width: 100%;
+            }
+            .students{
+                .student{
+                    text-align: center;
+                    flex-direction: column;
+                    margin-bottom: 100px;
+                    .png{
+                        display: none;
+                        width: 100%;
+                    }
+                    .png1{
+                        display: block;
+                    }
+                    .png2{
+                        display: block;
+                    }
+                    .png3{
+                        display: block;
+                    }
+                    .png4{
+                        display: block;
+                    }
+                    .png5{
+                        display: block;
+                    }
+                    .aniqlash{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .address{
+        .container{
+            .laoret{
+                width: 100%;
+            }
+            .crads{
+                width: 100%;
+                .crad{
+                    width: 100%;
+                    input{
+                        width: 100%;
+                    }
+                    button{
+                        padding: 10px 15px;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .container{
+            flex-direction: column;
+            text-align: center;
+            .copyright{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .about{
+                width: 100%;
+            }
+            .saytlar{
+                width: 100%;
+                .sayt{
+                    flex-direction: column;
+                    text-align: center;
+                    margin: 0 auto;
+                    margin-bottom: 20px;
+                }
+            }
+        }
     }
 }
